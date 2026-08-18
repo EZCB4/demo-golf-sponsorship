@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Fairline Media | Golf Club Sponsorship &amp; Free Tee Signage (Demo)</title>
+<meta name="description" content="Premium tee-box signage at no cost to golf clubs, funded by local business sponsorship. A demonstration build by Synth Studio for a fictional company.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Fairline Media">
+<meta property="og:title" content="Fairline Media | Golf Club Sponsorship &amp; Free Tee Signage (Demo)">
+<meta property="og:description" content="Premium tee-box signage at no cost to golf clubs, funded by local business sponsorship. A demonstration build by Synth Studio for a fictional company.">
+<meta property="og:url" content="https://ezcb4.github.io/demo-golf-sponsorship/">
+<meta property="og:image" content="https://ezcb4.github.io/demo-golf-sponsorship/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://ezcb4.github.io/demo-golf-sponsorship/assets/og-image.jpg">
+<meta name="theme-color" content="#070a08">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,100..125,400..900&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <a class="nav__logo" href="index.html" aria-label="Fairline Media home"><span class="brand-lockup"><b>Fairline</b><span>Media</span></span></a>
+  <div class="nav__links">
+    <a href="index.html" class="active">Home</a>
+    <a href="tee-box-signs.html">Tee Signs</a>
+    <a href="sponsorships.html">Sponsorship</a>
+    <a href="golf-courses.html">Partner Clubs</a>
+    <a class="nav__cta" href="contact.html">Contact</a>
+  </div>
+  <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+<div class="drawer">
+  <a href="index.html" class="active">Home</a>
+  <a href="tee-box-signs.html">Tee Signs</a>
+  <a href="sponsorships.html">Sponsorship</a>
+  <a href="golf-courses.html">Partner Clubs</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<header class="scrub" id="top" aria-label="A golfer's swing at golden hour, played by your scroll">
+  <div class="scrub__stage">
+    <canvas id="scrubCanvas" aria-hidden="true"></canvas>
+    <div class="scrub__scrim"></div>
+    <canvas id="particles"></canvas>
+    <div class="scrub__beat scrub__beat--1" id="beat1">
+      <p class="eyebrow scrub__eyebrow">Fairline Media · United Kingdom</p>
+      <h1 class="scrub__h1 display" aria-label="Sponsorship on every tee">
+        <span class="line"><span class="word" style="animation-delay:.15s">Sponsorship</span></span>
+        <span class="line"><span class="word serif-it" style="animation-delay:.35s">on&nbsp;every</span></span>
+        <span class="line"><span class="word" style="animation-delay:.55s">tee.</span></span>
+      </h1>
+      <p class="scrub__sub">Premium tee-box signage, designed, made and installed at no cost to the club, funded by local businesses that want eighteen chances to be seen every round.</p>
+    </div>
+    <div class="scrub__beat scrub__beat--3" id="beat3" style="opacity:0">
+      <div class="scrub__ctas">
+        <a class="btn btn--solid" href="tee-box-signs.html">For golf clubs <span class="tick">→</span></a>
+        <a class="btn btn--ghost" href="sponsorships.html">For sponsors <span class="tick">→</span></a>
+      </div>
+      <div class="scrub__meta">
+        <span><b>12</b> partner clubs</span>
+        <span><b>190+</b> sponsored tees</span>
+        <span><b>£0</b> cost to clubs</span>
+      </div>
+    </div>
+    <div class="scrub__hint" id="scrubHint">Scroll</div>
+  </div>
+</header>
+
+<template id="fallbackHero">
+<header class="hero" id="top">
+  <div class="hero__media" id="heroMedia">
+    <video id="heroVideo" class="hero__photo" autoplay muted loop playsinline preload="auto" poster="assets/hero_poster.jpg" aria-label="A golden-hour golf course with an unsponsored twin-post tee sign, gently animated">
+      <source src="assets/hero_loop.mp4" type="video/mp4">
+    </video>
+    <div class="mist mist--a"></div>
+    <div class="mist mist--b"></div>
+    <div class="lightsweep"></div>
+    <canvas id="particles"></canvas>
+  </div>
+  <div class="hero__scrim"></div>
+  <div class="hero__content" id="heroContent">
+    <p class="eyebrow hero__eyebrow">Fairline Media · United Kingdom</p>
+    <p class="hero__h1 display" role="heading" aria-level="1" aria-label="Sponsorship on every tee">
+      <span class="line"><span class="word" style="animation-delay:.15s">Sponsorship</span></span>
+      <span class="line"><span class="word serif-it" style="animation-delay:.35s">on&nbsp;every</span></span>
+      <span class="line"><span class="word" style="animation-delay:.55s">tee.</span></span>
+    </p>
+    <p class="hero__sub">Premium tee-box signage, designed, made and installed at no cost to the club, funded by local businesses that want eighteen chances to be seen every round.</p>
+    <div class="hero__ctas">
+      <a class="btn btn--solid" href="tee-box-signs.html">For golf clubs <span class="tick">→</span></a>
+      <a class="btn btn--ghost" href="sponsorships.html">For sponsors <span class="tick">→</span></a>
+    </div>
+    <div class="hero__meta">
+      <span><b>12</b> partner clubs</span>
+      <span><b>190+</b> sponsored tees</span>
+      <span><b>£0</b> cost to clubs</span>
+    </div>
+  </div>
+</header>
+</template>
+
+<section class="section-pad" id="model">
+  <div class="wrap feature">
+    <div class="reveal">
+      <p class="eyebrow">The model</p>
+      <h2 class="display">Clubs get signage.<br>Sponsors get <span class="serif-it">seen.</span></h2>
+      <p>Every tee on your course is a quiet piece of media. A golfer stands beside it for two or three minutes, eighteen times a round, with nothing else asking for their attention.</p>
+      <p>We design and install premium tee signs for the club at no cost, and fund them by matching each hole with one carefully chosen local business. The club gets a sharper course. The sponsor gets the most patient audience in advertising. We look after both sides of the deal.</p>
+      <a class="btn btn--ghost" href="tee-box-signs.html">How it works <span class="tick">→</span></a>
+    </div>
+    <figure class="feature__img wide reveal" style="transition-delay:.15s">
+      <img src="assets/sign_context.jpg" alt="A twin-post tee sign with a blank panel beside an empty tee box at dawn" width="1600" height="900" decoding="async" loading="lazy">
+    </figure>
+  </div>
+</section>
+
+<section class="on-fairway section-pad">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">From survey to unveiling</p>
+      <h2 class="display">Five steps. Nothing for the club to do.</h2>
+    </div>
+    <div class="timeline">
+      <div class="tstep reveal"><div class="tstep__dot"></div><h3>Course survey</h3><p>We walk all eighteen, photograph every tee and agree positions with the greenkeeper, not over their head.</p></div>
+      <div class="tstep reveal"><div class="tstep__dot"></div><h3>Sign design</h3><p>Hole layouts, yardages and club branding drawn up properly and approved by the club before anything is made.</p></div>
+      <div class="tstep reveal"><div class="tstep__dot"></div><h3>Sponsor matching</h3><p>We approach local businesses the members already use. The club sees and approves every name before it goes up.</p></div>
+      <div class="tstep reveal"><div class="tstep__dot"></div><h3>Manufacture</h3><p>Hardwood or composite, built for wet winters and baking summers, with panels that swap without tools.</p></div>
+      <div class="tstep reveal"><div class="tstep__dot"></div><h3>Install and maintain</h3><p>Fitted in a day around play. We inspect twice a season and fix weather damage at our cost, not the club's.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Two audiences, one deal</p>
+      <h2 class="display">Which side of the tee are you on?</h2>
+    </div>
+    <div class="grid-2">
+      <div class="card reveal">
+        <div class="card__body">
+          <p class="eyebrow eyebrow--bare">For golf clubs</p>
+          <h3 class="display">Eighteen new signs. Zero invoices.</h3>
+          <p>Course signage that matches the standard of your greens, funded entirely by sponsorship we arrange and you approve. If a sponsor lapses, the sign stays and we refill the panel.</p>
+          <a class="btn btn--solid" href="tee-box-signs.html">See the signs <span class="tick">→</span></a>
+        </div>
+      </div>
+      <div class="card reveal" style="transition-delay:.12s">
+        <div class="card__body">
+          <p class="eyebrow eyebrow--bare">For sponsors</p>
+          <h3 class="display">Two minutes of attention, eighteen times a round.</h3>
+          <p>Your name in front of the exact people who hire solicitors, book dentists and renovate kitchens, at the one moment nobody is looking at a phone.</p>
+          <a class="btn btn--ghost" href="sponsorships.html">Sponsor a tee <span class="tick">→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section-pad" id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">The work</p>
+      <h2 class="display">Built for weather.<br>Finished for <span class="serif-it">members.</span></h2>
+    </div>
+    <div class="grid-3">
+      <figure class="reveal"><img src="assets/sign_hardwood.jpg" alt="Premium hardwood tee sign with a blank routed panel at golden hour" width="1600" height="900" decoding="async" loading="lazy"><figcaption class="cap">Heritage hardwood, oiled for the seasons</figcaption></figure>
+      <figure class="reveal" style="transition-delay:.08s"><img src="assets/sign_eco.jpg" alt="Dark composite tee sign with a blank panel in cool morning light" width="1600" height="900" decoding="async" loading="lazy"><figcaption class="cap">Eco composite, strimmer-proof and fade-proof</figcaption></figure>
+      <figure class="reveal" style="transition-delay:.16s"><img src="assets/green_flag.jpg" alt="A golf green at sunset with a plain flag backlit by low sun" width="1600" height="900" decoding="async" loading="lazy"><figcaption class="cap">Course furniture that earns its place</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="on-fairway section-pad" id="sponsors-strip">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">The names on the tees</p>
+      <h2 class="display">Local businesses, seen every round.</h2>
+    </div>
+    <div class="names reveal" aria-label="A sample of sponsor businesses">
+      <span>Hartley Plumbing</span><span>Vale Dental</span><span>Brookes &amp; Long Solicitors</span><span>Fenchurch Motors</span><span>Bloom &amp; Wilde Florists</span><span>Kestrel Roofing</span><span>Marlow Kitchens</span><span>Ashdown Wealth</span>
+    </div>
+    <p class="reveal" style="margin-top:18px;font-size:13px;opacity:.55">Sponsor names are fictional, invented for this demonstration.</p>
+  </div>
+</section>
+
+<section class="band" aria-label="A golf course at golden hour">
+  <img class="bg" src="assets/course_links.jpg" alt="" width="1600" height="900" loading="lazy" decoding="async">
+  <div class="scrim"></div>
+  <div class="wrap reveal">
+    <p class="eyebrow">The standard</p>
+    <h2 class="display">Signage the members point at.<br><span class="serif-it">For the right reasons.</span></h2>
+    <a class="btn btn--solid" href="contact.html">Talk to us <span class="tick">→</span></a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="foot__logo">
+        <span class="brand-lockup" style="margin-bottom:12px"><b>Fairline</b><span>Media</span></span>
+        <p>Sponsorship on every tee.<br>Premium tee signage at no cost to clubs, funded by local businesses that want to be seen on the course.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="tee-box-signs.html">Tee Signs</a>
+        <a href="sponsorships.html">Sponsorship</a>
+        <a href="golf-courses.html">Partner Clubs</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Fairline Media · UK</h4>
+        <a href="#demo">hello@fairlinemedia.co.uk</a>
+        <a href="#demo">01632 960 411</a>
+      </div>
+      <div>
+        <h4>About this site</h4>
+        <p>Fairline Media is a fictional company. This site is a demonstration build by Synth Studio; contact details are dummy content and the links are switched off.</p>
+      </div>
+    </div>
+    <p class="legal">Demo build by Synth Studio. Fairline Media is fictional; any resemblance to a real company is coincidental.</p>
+  </div>
+</footer>
+<div class="demo-badge">Demo build by Synth Studio</div>
+<script src="site.js"></script>
+</body>
+</html>
