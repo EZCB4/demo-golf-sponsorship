@@ -603,9 +603,6 @@ body.capture .scrub__hint{display:none}
 .brand-lockup{display:flex;flex-direction:column;line-height:1.05}
 .brand-lockup b{font-family:"Archivo",sans-serif;font-stretch:118%;font-weight:800;font-size:19px;color:var(--mist);letter-spacing:.02em}
 .brand-lockup span{font-size:9px;font-weight:600;letter-spacing:.34em;text-transform:uppercase;color:var(--violet-lt);margin-top:3px}
-.demo-badge{position:fixed;left:14px;bottom:14px;z-index:90;font-size:10px;font-weight:600;letter-spacing:.12em;
-  text-transform:uppercase;background:rgba(7,10,8,.92);color:var(--mist);border:1px solid var(--hairline);
-  padding:8px 14px;border-radius:999px;pointer-events:none}
 .demo-toast{position:fixed;left:50%;bottom:64px;transform:translateX(-50%) translateY(8px);z-index:120;
   background:var(--fairway);color:var(--mist);font-size:13px;font-weight:400;padding:12px 22px;border-radius:999px;
   border:1px solid var(--hairline);opacity:0;pointer-events:none;transition:opacity .3s ease,transform .3s ease;
